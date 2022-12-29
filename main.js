@@ -30,7 +30,11 @@ $(document).ready(function () {
         'border-b-2 text-slate-400 border-slate-400'
       );
       $('#nav-about').removeClass('border-b-2 text-slate-400 border-slate-400');
+      $('#btt').addClass('opacity-100');
+      $('#btt').removeClass('opacity-0');
     } else {
+      $('#btt').removeClass('opacity-100');
+      $('#btt').addClass('opacity-0');
       $('#nav-projects').removeClass(
         'border-b-2 text-slate-400 border-slate-400'
       );
@@ -55,6 +59,8 @@ $(document).ready(function () {
         'border-b-2 text-slate-400 border-slate-400'
       );
       $('#nav-about').removeClass('border-b-2 text-slate-400 border-slate-400');
+      $('#btt').addClass('opacity-100');
+      $('#btt').removeClass('opacity-0');
     }
   });
 });
@@ -77,6 +83,8 @@ $(document).ready(function () {
       $('#nav-contact').removeClass(
         'border-b-2 text-slate-400 border-slate-400'
       );
+      $('#btt').addClass('opacity-100');
+      $('#btt').removeClass('opacity-0');
     }
   });
 });
@@ -97,6 +105,8 @@ $(document).ready(function () {
         'border-b-2 text-slate-400 border-slate-400'
       );
       $('#nav-about').removeClass('border-b-2 text-slate-400 border-slate-400');
+      $('#btt').addClass('opacity-100');
+      $('#btt').removeClass('opacity-0');
     }
   });
 });
@@ -107,6 +117,6 @@ function closeMenu() {
     $('#menu-icon').attr('name', 'menu');
     $('#menu-item').removeClass('opacity-100').addClass('opacity-0');
     $('#menu-item').removeClass('left-0').addClass('left-[100vw]');
-    window.history.replaceState(null, 'Link', '/web-portfolio/');
+    window.history.replaceState(null, 'Link', '/');
   });
 }

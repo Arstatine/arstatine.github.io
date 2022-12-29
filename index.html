@@ -16,7 +16,7 @@
     >
       <div class="pb-2 flex justify-between items-center">
         <span
-          onclick="window.location='/web-portfolio'"
+          onclick="window.location='/'"
           class="font-sans text-4xl font-semibold cursor-pointer text-blue-600"
         >
           xenonv.
@@ -104,9 +104,10 @@
           <a
             type="button"
             href="#about"
+            onclick="closeMenu()"
             class="w-fit flex justify-center items-center px-3 py-2 rounded border-2 border-blue-600 bg-blue-600 text-slate-100 text-lg hover:bg-blue-500 hover:border-blue-500"
           >
-            About me
+            about me
           </a>
         </div>
         <div
@@ -246,7 +247,7 @@
       <section id="services" class="bg-slate-900 py-24">
         <h1 class="text-2xl text-slate-50 text-center pb-2">services</h1>
         <h2 class="text-4xl text-blue-500 text-center pb-10 font-semibold">
-          WHAT WE DO?
+          WHAT I DO?
         </h2>
         <div
           class="flex flex-wrap justify-center align-center md:px-24 sm:px-12 px-6"
@@ -266,13 +267,17 @@
                     Web Design
                   </p>
                   <p class="text-sm font-normal text-slate-400 mt-5">
-                    Hello and welcome to our web design service! We are a team
-                    of professional web designers and developers with a passion
-                    for creating visually stunning and user-friendly websites
-                    for businesses and individuals.
+                    Innovative, user-friendly, human-readible and customer
+                    oriented designed molded In state-of-the-art interfaces at
+                    your services.
                   </p>
                 </blockquote>
               </div>
+              <button
+                class="border-2 border-slate-400 py-2 px-5 rounded text-slate-400 mt-5 hover:bg-slate-800"
+              >
+                Learn more
+              </button>
             </figure>
           </div>
 
@@ -288,16 +293,20 @@
               <div class="text-center space-y-4">
                 <blockquote>
                   <p class="text-xl sm:text-2xl font-medium text-slate-200">
-                    Service 2
+                    Web Development
                   </p>
                   <p class="text-sm font-normal text-slate-400 mt-5">
-                    Hello and welcome to our web development service! We are a
-                    team of professional web developers who specialize in
-                    creating custom websites and web applications for businesses
-                    and individuals.
+                    Innovative, user-friendly, human-readible and customer
+                    oriented designed molded In state-of-the-art interfaces at
+                    your services.
                   </p>
                 </blockquote>
               </div>
+              <button
+                class="border-2 border-slate-400 py-2 px-5 rounded text-slate-400 mt-5 hover:bg-slate-800"
+              >
+                Learn more
+              </button>
             </figure>
           </div>
         </div>
@@ -393,39 +402,179 @@
       </section>
 
       <!-- CONTACT SECTION -->
-      <section
-        id="contact"
-        class="bg-slate-700 py-24"
-        style="padding-bottom: 2000px"
-      >
+      <section id="contact" class="bg-slate-900 py-24">
         <h1 class="text-2xl text-slate-50 text-center pb-2">contacts</h1>
         <h2 class="text-4xl text-blue-500 text-center pb-10 font-semibold">
           GET IN TOUCH
         </h2>
+
+        <div
+          class="m-5 text-center flex flex-col md:flex-row justify-around items-center md:items-start mx-auto w-[100%] md:w-[100%]"
+        >
+          <div class="my-5 w-[50%]">
+            <h1
+              class="w-[100%] md:w-[75%] text-center md:text-right text-blue-500 text-2xl"
+            >
+              Inquire
+            </h1>
+            <p
+              class="w-[100%] md:w-[75%] text-center md:text-right text-slate-400"
+            >
+              Anything you want? Feel free to inquire:
+            </p>
+          </div>
+          <form
+            action=""
+            class="flex justify-center items-center md:items-start flex-col w-[100%] md:w-[50%]"
+          >
+            <select
+              name="inquiry"
+              id="inquiry"
+              required
+              aria-label="Select"
+              class="p-4 outline-none bg-slate-700 rounded m-2 w-[75%] text-slate-400"
+            >
+              <option value="">Please select an inquiry</option>
+              <option value="appui">App/UI Design</option>
+              <option value="webui">Web/UI Design</option>
+              <option value="webdev">Web Development</option>
+              <option value="other">Other consultations</option>
+            </select>
+            <input
+              type="text"
+              placeholder="Please enter your name"
+              required
+              id="name"
+              name="name"
+              class="p-4 outline-none bg-slate-700 rounded m-2 w-[75%] text-slate-400"
+            />
+            <input
+              type="email"
+              placeholder="Please enter your email address"
+              required
+              id="email"
+              name="email"
+              class="p-4 outline-none bg-slate-700 rounded m-2 w-[75%] text-slate-400"
+            />
+            <input
+              type="number"
+              placeholder="Please enter your phone number"
+              required
+              id="number"
+              name="number"
+              class="p-4 outline-none bg-slate-700 rounded m-2 w-[75%] text-slate-400 appearance-none"
+            />
+            <textarea
+              name="message"
+              id="message"
+              rows="10"
+              placeholder="Please enter your inquiry"
+              class="p-4 outline-none bg-slate-700 rounded m-2 w-[75%] text-slate-400"
+              required
+            ></textarea>
+            <input
+              type="submit"
+              class="p-2 outline-none bg-blue-500 hover:bg-blue-600 rounded m-2 w-[75%] h-[50px] cursor-pointer text-slate-200"
+            />
+          </form>
+        </div>
+
+        <div
+          class="m-5 text-center flex flex-col md:flex-row justify-start items-center md:items-start mx-auto w-[100%] md:w-[100%]"
+        >
+          <div class="my-5 w-[50%]">
+            <h1
+              class="w-[100%] md:w-[75%] text-center md:text-right text-blue-500 text-2xl"
+            >
+              Social Media
+            </h1>
+            <p
+              class="w-[100%] md:w-[75%] text-center md:text-right text-slate-400"
+            >
+              Anything you want? You can reach me on social media:
+            </p>
+          </div>
+          <div
+            class="my-5 w-[75%] md:w-[50%] text-slate-300 text-center md:text-left"
+          >
+            <a
+              href="https://www.facebook.com/xenon.vergara.2201/"
+              target="_blank"
+              class="text-xl block"
+              ><b>Facebook:</b> Xenon Ramos Vergara</a
+            >
+            <a
+              href="https://www.instagram.com/arstatine_xrv/"
+              target="_blank"
+              class="text-xl block"
+              ><b>Instagram:</b> Xenon Ramos Vergara</a
+            >
+            <a
+              href="https://www.linkedin.com/in/xenon-vergara-8b66391b9/"
+              target="_blank"
+              class="text-xl block"
+              ><b>LinkedIn:</b> Xenon Vergara</a
+            >
+            <a
+              href="https://github.com/Arstatine"
+              target="_blank"
+              class="text-xl block"
+              ><b>GitHub:</b> Xenon Vergara</a
+            >
+            <a
+              href="mailto: x.vergara2201@gmail.com"
+              target="_blank"
+              class="text-xl block"
+              ><b>Email:</b> x.vergara2201@gmail.com</a
+            >
+          </div>
+        </div>
       </section>
     </main>
 
+    <!-- BACK TO TOP -->
+    <div
+      class="fixed bottom-[25px] right-[25px] z-[2] opacity-0 transition-all duration-[1s] ease-in-out p-0 m-0"
+      id="btt"
+    >
+      <a
+        href="#"
+        onclick="closeMenu()"
+        class="bg-blue-500 text-slate-200 text-5xl rounded-full text-center flex justify-center items-center flex-wrap p-0 m-0"
+        ><ion-icon name="arrow-up-circle-outline"></ion-icon>
+      </a>
+    </div>
+
     <!-- FOOTER-->
-    <footer class="bg-slate-900 p-10">
+    <footer class="bg-slate-800 p-10">
       <div class="text-slate-300 text-center">
-        <a href="https://www.facebook.com/xenon.vergara.2201"
+        <a href="https://www.facebook.com/xenon.vergara.2201" target="_blank"
           ><ion-icon
             name="logo-facebook"
             class="text-4xl m-1 hover:text-slate-400"
           ></ion-icon
         ></a>
-        <a href="https://www.instagram.com/semi_colon_101"
+        <a href="https://www.instagram.com/arstatine_xrv/" target="_blank"
           ><ion-icon
             name="logo-instagram"
             class="text-4xl m-1 hover:text-slate-400"
           ></ion-icon
         ></a>
-        <a href="https://github.com/Arstatine"
+        <a href="https://github.com/Arstatine" target="_blank"
           ><ion-icon
             name="logo-github"
             class="text-4xl m-1 hover:text-slate-400"
           ></ion-icon
         ></a>
+        <a
+          href="https://www.linkedin.com/in/xenon-vergara-8b66391b9/"
+          target="_blank"
+        >
+          <ion-icon
+            name="logo-linkedin"
+            class="text-4xl m-1 hover:text-slate-400"
+          ></ion-icon>
+        </a>
       </div>
       <div class="text-slate-300 text-center font-thin">
         &copy; 2022 Xenon Vergara. All rights reserved.
