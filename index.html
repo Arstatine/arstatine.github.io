@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xenon Vergara</title>
+    <link rel="icon" type="image/x-icon" href="icon.png" />
+    <link rel="stylesheet" href="main.css" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-slate-900 overflow-x-hidden">
+    <!-- HEADER -->
+    <nav
+      class="text-slate-50 p-5 md:p-2 md:flex md:justify-around md:items-center bg-slate-900 md:bg-slate-900/75 z-[99]"
+    >
+      <div class="pb-2 flex justify-between items-center">
+        <span
+          onclick="window.location='/web-portfolio'"
+          class="font-sans text-4xl font-semibold cursor-pointer text-blue-600"
+        >
+          xenonv.
+        </span>
+        <span class="text-4xl md:hidden block cursor-pointer" id="menu-btn">
+          <ion-icon name="menu" id="menu-icon"></ion-icon>
+        </span>
+      </div>
+
+      <ul
+        class="h-screen text-slate-50 md:flex md:justify-between md:items-center md:static w-full absolute md:w-auto md:h-auto md:opacity-100 opacity-0 md:w-auto pt-0 md:p-0 md:mt-0 mt-5 bg-slate-800 md:bg-slate-900/0 left-[100vw] transition-all ease-in-out duration-500"
+        id="menu-item"
+      >
+        <a
+          href="#"
+          onclick="closeMenu()"
+          class="border-b-2 border-slate-50 hover:border-slate-400 text-slate-400 border-slate-400"
+          id="nav-home"
+          ><li class="p-5 text-xl hover:text-slate-400">home</li></a
+        >
+        <a
+          href="#projects"
+          class="border-slate-50 hover:border-slate-400"
+          id="nav-projects"
+          onclick="closeMenu()"
+          ><li class="p-5 text-xl hover:text-slate-400">projects</li></a
+        >
+        <a
+          href="#services"
+          class="border-slate-50 hover:border-slate-400"
+          id="nav-services"
+          onclick="closeMenu()"
+          ><li class="p-5 text-xl hover:text-slate-400">services</li></a
+        >
+        <a
+          href="#about"
+          class="border-slate-50 hover:border-slate-400"
+          id="nav-about"
+          onclick="closeMenu()"
+          ><li class="p-5 text-xl hover:text-slate-400">about</li></a
+        >
+        <a
+          href="#contact"
+          class="border-slate-50 hover:border-slate-400"
+          id="nav-contact"
+          onclick="closeMenu()"
+          ><li class="p-5 text-xl hover:text-slate-400">contacts</li></a
+        >
+        <li class="md:hidden block p-5 text-xl hover:text-slate-400">
+          <button
+            onclick="closeMenu()"
+            class="px-3 py-2 rounded border-2 border-blue-600 bg-blue-600 text-slate-100 text-lg hover:bg-blue-500 hover:border-blue-500"
+          >
+            Get Started
+          </button>
+        </li>
+      </ul>
+
+      <div class="md:block hidden">
+        <button
+          class="px-3 py-2 rounded border-2 border-blue-600 bg-blue-600 text-slate-100 text-lg hover:bg-blue-500 hover:border-blue-500"
+        >
+          Get Started
+        </button>
+      </div>
+    </nav>
+
+    <!-- CONTENTS -->
+    <main class="mt-24">
+      <!-- HOME SECTION -->
+      <section
+        class="flex justify-around items-center flex-wrap-reverse lg:flex-nowrap p-5"
+      >
+        <div
+          class="py-5 flex justify-center items-center flex-col text-center md:text-left lg:block"
+        >
+          <h1 class="text-slate-50 text-4xl md:text-6xl">Hi I'm</h1>
+          <h1 class="text-4xl md:text-6xl font-black text-blue-600">
+            XENON VERGARA
+          </h1>
+          <h1 class="text-slate-50 text-lg md:text-3xl pt-1">
+            A Web Developer
+          </h1>
+          <br />
+          <a
+            type="button"
+            href="#about"
+            class="w-fit flex justify-center items-center px-3 py-2 rounded border-2 border-blue-600 bg-blue-600 text-slate-100 text-lg hover:bg-blue-500 hover:border-blue-500"
+          >
+            About me
+          </a>
+        </div>
+        <div
+          class="w-96 h-96 md:h-[500px] md:w-[500px] lg:h-[800px] lg:w-[800px] overflow-hidden rounded-full py-5 flex"
+        >
+          <img
+            src="src/assets/person-bg.png"
+            alt="Xenon Vergara Photo"
+            class="object-cover self-center"
+          />
+        </div>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section id="projects" class="bg-slate-800 py-24 h-auto overflow-hidden">
+        <h1 class="text-2xl text-slate-50 text-center pb-2">projects</h1>
+        <h2 class="text-4xl text-blue-500 text-center pb-10 font-semibold">
+          CREATIVE WORKS
+        </h2>
+        <div
+          class="flex flex-wrap justify-center align-center md:px-24 sm:px-12 px-6"
+        >
+          <!-- PROJECT 1 -->
+          <div
+            class="w-[450px] max-w-[450px] p-4 transition-all duration-[1.5s]"
+          >
+            <figure class="rounded-xl p-8 bg-slate-700">
+              <img
+                class="w-[100%] max-w-[100%] h-[200px] max-h-[200px] mx-auto p-4 object-cover"
+                src="src/assets/no-image.png"
+                alt=""
+              />
+              <div class="pt-6 md:p-8 text-center space-y-4">
+                <blockquote>
+                  <p class="text-xl sm:text-2xl font-medium text-slate-200">
+                    Project 1
+                  </p>
+                  <p class="text-sm font-normal text-slate-400 mt-5">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Inventore fuga non distinctio voluptatem veniam quam
+                    obcaecati, exercitationem officiis quos dolorum modi autem
+                    sed repudiandae a cupiditate ab aliquam debitis iusto.
+                  </p>
+                </blockquote>
+                <br />
+                <figcaption class="font-medium">
+                  <div class="text-sky-500 dark:text-sky-400">
+                    <a
+                      href=""
+                      class="px-3 py-2 rounded border-2 border-blue-600 bg-blue-600 text-slate-100 text-lg hover:bg-blue-500 hover:border-blue-500"
+                    >
+                      View Project
+                    </a>
+                  </div>
+                </figcaption>
+              </div>
+            </figure>
+          </div>
+
+          <!-- PROJECT 2 -->
+          <div
+            class="w-[450px] max-w-[450px] p-4 transition-all duration-[1.5s]"
+          >
+            <figure class="rounded-xl p-8 bg-slate-700">
+              <img
+                class="w-[100%] max-w-[100%] h-[200px] max-h-[200px] mx-auto p-4 object-cover"
+                src="src/assets/no-image.png"
+                alt=""
+              />
+              <div class="pt-6 md:p-8 text-center space-y-4">
+                <blockquote>
+                  <p class="text-xl sm:text-2xl font-medium text-slate-200">
+                    Project 2
+                  </p>
+                  <p class="text-sm font-normal text-slate-400 mt-5">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Inventore fuga non distinctio voluptatem veniam quam
+                    obcaecati, exercitationem officiis quos dolorum modi autem
+                    sed repudiandae a cupiditate ab aliquam debitis iusto.
+                  </p>
+                </blockquote>
+                <br />
+                <figcaption class="font-medium">
+                  <div class="text-sky-500 dark:text-sky-400">
+                    <a
+                      href=""
+                      class="px-3 py-2 rounded border-2 border-blue-600 bg-blue-600 text-slate-100 text-lg hover:bg-blue-500 hover:border-blue-500"
+                    >
+                      View Project
+                    </a>
+                  </div>
+                </figcaption>
+              </div>
+            </figure>
+          </div>
+
+          <!-- PROJECT 3 -->
+          <div
+            class="w-[450px] max-w-[450px] p-4 transition-all duration-[1.5s]"
+          >
+            <figure class="rounded-xl p-8 bg-slate-700">
+              <img
+                class="w-[100%] max-w-[100%] h-[200px] max-h-[200px] mx-auto p-4 object-cover"
+                src="src/assets/no-image.png"
+                alt=""
+              />
+              <div class="pt-6 md:p-8 text-center space-y-4">
+                <blockquote>
+                  <p class="text-xl sm:text-2xl font-medium text-slate-200">
+                    Project 3
+                  </p>
+                  <p class="text-sm font-normal text-slate-400 mt-5">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Inventore fuga non distinctio voluptatem veniam quam
+                    obcaecati, exercitationem officiis quos dolorum modi autem
+                    sed repudiandae a cupiditate ab aliquam debitis iusto.
+                  </p>
+                </blockquote>
+                <br />
+                <figcaption class="font-medium">
+                  <div class="text-sky-500 dark:text-sky-400">
+                    <a
+                      href=""
+                      class="px-3 py-2 rounded border-2 border-blue-600 bg-blue-600 text-slate-100 text-lg hover:bg-blue-500 hover:border-blue-500"
+                    >
+                      View Project
+                    </a>
+                  </div>
+                </figcaption>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES SECTION -->
+      <section id="services" class="bg-slate-900 py-24">
+        <h1 class="text-2xl text-slate-50 text-center pb-2">services</h1>
+        <h2 class="text-4xl text-blue-500 text-center pb-10 font-semibold">
+          WHAT WE DO?
+        </h2>
+        <div
+          class="flex flex-wrap justify-center align-center md:px-24 sm:px-12 px-6"
+        >
+          <!-- SERVICE 1 -->
+          <div
+            class="w-[450px] max-w-[450px] p-4 transition-all duration-[1.5s]"
+          >
+            <figure class="rounded-xl p-8 text-center">
+              <ion-icon
+                name="brush-outline"
+                class="text-[50px] sm:text-[75px] text-slate-100 pb-5"
+              ></ion-icon>
+              <div class="text-center space-y-4">
+                <blockquote>
+                  <p class="text-xl sm:text-2xl font-medium text-slate-200">
+                    Web Design
+                  </p>
+                  <p class="text-sm font-normal text-slate-400 mt-5">
+                    Hello and welcome to our web design service! We are a team
+                    of professional web designers and developers with a passion
+                    for creating visually stunning and user-friendly websites
+                    for businesses and individuals.
+                  </p>
+                </blockquote>
+              </div>
+            </figure>
+          </div>
+
+          <!-- SERVICE 2 -->
+          <div
+            class="w-[450px] max-w-[450px] p-4 transition-all duration-[1.5s]"
+          >
+            <figure class="rounded-xl p-8 text-center">
+              <ion-icon
+                name="code-slash-outline"
+                class="text-[50px] sm:text-[75px] text-slate-100 pb-5"
+              ></ion-icon>
+              <div class="text-center space-y-4">
+                <blockquote>
+                  <p class="text-xl sm:text-2xl font-medium text-slate-200">
+                    Service 2
+                  </p>
+                  <p class="text-sm font-normal text-slate-400 mt-5">
+                    Hello and welcome to our web development service! We are a
+                    team of professional web developers who specialize in
+                    creating custom websites and web applications for businesses
+                    and individuals.
+                  </p>
+                </blockquote>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="bg-slate-800 py-24">
+        <h1 class="text-2xl text-slate-50 text-center pb-2">about</h1>
+        <h2 class="text-4xl text-blue-500 text-center pb-10 font-semibold">
+          SKILLS
+        </h2>
+        <div class="text-center flex justify-center items-center">
+          <p
+            class="text-center text-slate-200 md:w-[50%] md:max-w-[50%] max-w-[75%]"
+          >
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus,
+            quasi quo, perferendis fuga quos, possimus itaque aperiam corporis
+            tenetur natus nam harum vel voluptatem assumenda voluptatibus
+            expedita repudiandae obcaecati? Aliquam!
+          </p>
+        </div>
+        <br />
+        <h1 class="text-center text-blue-500 text-2xl my-5">Technologies:</h1>
+        <div class="text-center mx-auto w-[100%] md:w-[75%]">
+          <div class="flex flex-wrap justify-center items-center">
+            <img
+              src="src/assets/html.png"
+              alt=""
+              class="aspect-video w-[150px] max-w-[150px] sm:w-[200px] sm:max-w-[200px] md:w-[250px] md:max-w-[250px] object-contain p-5"
+            />
+            <img
+              src="src/assets/css.png"
+              alt=""
+              class="aspect-video w-[150px] max-w-[150px] sm:w-[200px] sm:max-w-[200px] md:w-[250px] md:max-w-[250px] object-contain p-5"
+            />
+            <img
+              src="src/assets/php.png"
+              alt=""
+              class="aspect-video w-[150px] max-w-[150px] sm:w-[200px] sm:max-w-[200px] md:w-[250px] md:max-w-[250px] object-contain p-5"
+            />
+            <img
+              src="src/assets/js.png"
+              alt=""
+              class="aspect-video w-[150px] max-w-[150px] sm:w-[200px] sm:max-w-[200px] md:w-[250px] md:max-w-[250px] object-contain p-5"
+            />
+            <img
+              src="src/assets/mongodb.png"
+              alt=""
+              class="aspect-video w-[150px] max-w-[150px] sm:w-[200px] sm:max-w-[200px] md:w-[250px] md:max-w-[250px] object-contain p-5"
+            />
+            <img
+              src="src/assets/node.png"
+              alt=""
+              class="aspect-video w-[150px] max-w-[150px] sm:w-[200px] sm:max-w-[200px] md:w-[250px] md:max-w-[250px] object-contain p-5"
+            />
+            <img
+              src="src/assets/mysql.png"
+              alt=""
+              class="aspect-video w-[150px] max-w-[150px] sm:w-[200px] sm:max-w-[200px] md:w-[250px] md:max-w-[250px] object-contain p-5"
+            />
+            <img
+              src="src/assets/bootstrap.png"
+              alt=""
+              class="aspect-video w-[150px] max-w-[150px] sm:w-[200px] sm:max-w-[200px] md:w-[250px] md:max-w-[250px] object-contain p-5"
+            />
+            <img
+              src="src/assets/tailwind.png"
+              alt=""
+              class="aspect-video w-[150px] max-w-[150px] sm:w-[200px] sm:max-w-[200px] md:w-[250px] md:max-w-[250px] object-contain p-5"
+            />
+            <img
+              src="src/assets/git.png"
+              alt=""
+              class="aspect-video w-[150px] max-w-[150px] sm:w-[200px] sm:max-w-[200px] md:w-[250px] md:max-w-[250px] object-contain p-5"
+            />
+            <img
+              src="src/assets/github.png"
+              alt=""
+              class="aspect-video w-[150px] max-w-[150px] sm:w-[200px] sm:max-w-[200px] md:w-[250px] md:max-w-[250px] object-contain p-5"
+            />
+            <img
+              src="src/assets/figma.png"
+              alt=""
+              class="aspect-video w-[150px] max-w-[150px] sm:w-[200px] sm:max-w-[200px] md:w-[250px] md:max-w-[250px] object-contain p-5"
+            />
+            <img
+              src="src/assets/react.png"
+              alt=""
+              class="aspect-video w-[150px] max-w-[150px] sm:w-[200px] sm:max-w-[200px] md:w-[250px] md:max-w-[250px] object-contain p-5"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section
+        id="contact"
+        class="bg-slate-700 py-24"
+        style="padding-bottom: 2000px"
+      >
+        <h1 class="text-2xl text-slate-50 text-center pb-2">contacts</h1>
+        <h2 class="text-4xl text-blue-500 text-center pb-10 font-semibold">
+          GET IN TOUCH
+        </h2>
+      </section>
+    </main>
+
+    <!-- FOOTER-->
+    <footer class="bg-slate-900 p-10">
+      <div class="text-slate-300 text-center">
+        <a href="https://www.facebook.com/xenon.vergara.2201"
+          ><ion-icon
+            name="logo-facebook"
+            class="text-4xl m-1 hover:text-slate-400"
+          ></ion-icon
+        ></a>
+        <a href="https://www.instagram.com/semi_colon_101"
+          ><ion-icon
+            name="logo-instagram"
+            class="text-4xl m-1 hover:text-slate-400"
+          ></ion-icon
+        ></a>
+        <a href="https://github.com/Arstatine"
+          ><ion-icon
+            name="logo-github"
+            class="text-4xl m-1 hover:text-slate-400"
+          ></ion-icon
+        ></a>
+      </div>
+      <div class="text-slate-300 text-center font-thin">
+        &copy; 2022 Xenon Vergara. All rights reserved.
+      </div>
+    </footer>
+  </body>
+
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="main.js"></script>
+</html>
