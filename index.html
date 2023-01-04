@@ -67,19 +67,22 @@
         >
         <li class="md:hidden block p-5 text-xl hover:text-slate-400">
           <button
-            onclick="closeMenu()"
+            type="button"
+            onclick="openModal()"
             class="px-3 py-2 rounded border-2 border-blue-600 bg-blue-600 text-slate-100 text-lg hover:bg-blue-500 hover:border-blue-500"
           >
-            Hi!
+            FAQs
           </button>
         </li>
       </ul>
 
       <div class="md:block hidden">
         <button
+          type="button"
+          onclick="openModal()"
           class="px-3 py-2 rounded border-2 border-blue-600 bg-blue-600 text-slate-100 text-lg hover:bg-blue-500 hover:border-blue-500"
         >
-          Hi!
+          FAQs
         </button>
       </div>
     </nav>
@@ -107,7 +110,7 @@
             onclick="closeMenu()"
             class="w-fit flex justify-center items-center px-3 py-2 rounded border-2 border-blue-600 bg-blue-600 text-slate-100 text-lg hover:bg-blue-500 hover:border-blue-500"
           >
-            about me
+            Know more?
           </a>
         </div>
         <div
@@ -267,13 +270,14 @@
                     Web Design
                   </p>
                   <p class="text-sm font-normal text-slate-400 mt-5">
-                    Innovative, user-friendly, human-readible and customer
-                    oriented designed molded In state-of-the-art interfaces at
-                    your services.
+                    Innovative, user-friendly, human-readable, and
+                    customer-oriented designed molded in state-of-the-art
+                    interfaces at your services.
                   </p>
                 </blockquote>
               </div>
               <button
+                onclick="openContact()"
                 class="border-2 border-slate-400 py-2 px-5 rounded text-slate-400 mt-5 hover:bg-slate-800"
               >
                 Learn more
@@ -296,13 +300,14 @@
                     Web Development
                   </p>
                   <p class="text-sm font-normal text-slate-400 mt-5">
-                    Innovative, user-friendly, human-readible and customer
-                    oriented designed molded In state-of-the-art interfaces at
-                    your services.
+                    To design and create a website from scratch, update an
+                    existing website, or create a web-based application that
+                    performs a specific task.
                   </p>
                 </blockquote>
               </div>
               <button
+                onclick="openContact()"
                 class="border-2 border-slate-400 py-2 px-5 rounded text-slate-400 mt-5 hover:bg-slate-800"
               >
                 Learn more
@@ -397,6 +402,11 @@
               alt=""
               class="aspect-video w-[150px] max-w-[150px] sm:w-[200px] sm:max-w-[200px] md:w-[250px] md:max-w-[250px] object-contain p-5"
             />
+            <img
+              src="src/assets/ejs.png"
+              alt=""
+              class="aspect-video w-[150px] max-w-[150px] sm:w-[200px] sm:max-w-[200px] md:w-[250px] md:max-w-[250px] object-contain p-5"
+            />
           </div>
         </div>
       </section>
@@ -436,7 +446,7 @@
               aria-label="Select"
               class="p-4 outline-none bg-slate-700 rounded m-2 w-[75%] text-slate-400"
             >
-              <option value="">Please select an inquiry</option>
+              <option value="">Select an inquiry</option>
               <option value="appui">App/UI Design</option>
               <option value="webui">Web/UI Design</option>
               <option value="webdev">Web Development</option>
@@ -444,7 +454,7 @@
             </select>
             <input
               type="text"
-              placeholder="Please enter your name"
+              placeholder="Enter your name"
               required
               id="name"
               name="name"
@@ -452,7 +462,7 @@
             />
             <input
               type="email"
-              placeholder="Please enter your email address"
+              placeholder="Enter your email address"
               required
               id="email"
               name="email"
@@ -460,7 +470,7 @@
             />
             <input
               type="number"
-              placeholder="Please enter your phone number"
+              placeholder="Enter your mobile number"
               required
               id="number"
               name="number"
@@ -470,14 +480,16 @@
               name="message"
               id="message"
               rows="10"
-              placeholder="Please enter your inquiry"
+              placeholder="Enter your inquiry"
               class="p-4 outline-none bg-slate-700 rounded m-2 w-[75%] text-slate-400"
               required
             ></textarea>
-            <input
+            <button
               type="submit"
-              class="p-2 outline-none bg-blue-500 hover:bg-blue-400 rounded m-2 w-[75%] h-[50px] cursor-pointer text-slate-100 text-lg"
-            />
+              class="p-2 outline-none bg-blue-500 hover:bg-blue-400 rounded m-2 w-[75%] h-[50px] cursor-pointer text-slate-100 text-lg flex justify-center items-center"
+            >
+              Submit &nbsp;<ion-icon name="send-outline"></ion-icon>
+            </button>
           </form>
         </div>
 
@@ -529,6 +541,11 @@
               class="text-md p-3 rounded bg-slate-700 m-2 hover:bg-slate-600"
               ><b>Email:</b> x.vergara2201@gmail.com</a
             >
+            <h1
+              class="text-md p-3 rounded bg-slate-700 m-2 hover:bg-slate-600 cursor-pointer"
+            >
+              <b>Mobile No.:</b> 09069616342
+            </h1>
           </div>
         </div>
       </section>
@@ -542,7 +559,7 @@
       <a
         href="#"
         onclick="closeMenu()"
-        class="bg-blue-500 hover:bg-blue-400 text-slate-200 text-4xl rounded-full text-center flex justify-center items-center flex-wrap p-2 m-0"
+        class="bg-blue-500 hover:bg-blue-400 text-slate-200 text-3xl rounded-full text-center flex justify-center items-center flex-wrap p-3 m-0"
       >
         <ion-icon name="arrow-up-outline"></ion-icon>
       </a>
@@ -583,6 +600,110 @@
         &copy; 2022 Xenon Vergara. All rights reserved.
       </div>
     </footer>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content rounded bg-slate-300 w-[75%] lg:w-[50%]">
+        <span id="close" class="close text-slate-500 text-5xl">&times;</span>
+        <div class="modal-header">
+          <h2 class="text-blue-500 p-2 text-xl md:text-2xl">FAQs</h2>
+        </div>
+        <div class="modal-body my-5">
+          <details
+            class="border-t-2 border-b-2 border-slate-700 text-md md:text-xl p-3 lg:p-5 text-slate-700"
+          >
+            <summary class="cursor-pointer">
+              01. Xenon, how much is a website is?
+            </summary>
+            <p class="mt-5 text-xl md:text-2xl">
+              Hmm, let me ask you something first: How much is a computer?
+              Depends on which one you want, right? Same with websites: Costs
+              depend on your requirements, scope and features. Therefore your
+              budget defines what I can do for you.
+            </p>
+          </details>
+          <details
+            class="border-b-2 border-slate-700 text-md md:text-xl p-3 lg:p-5 text-slate-700"
+          >
+            <summary class="cursor-pointer">
+              02. Xenon, how long does it take to make a website?
+            </summary>
+            <p class="mt-5 text-xl md:text-2xl">
+              Depends on requirements and scope, but typically a single page
+              website takes 3-7 days, smaller projects 1-2 months, and larger
+              ones 3-4 months.
+            </p>
+          </details>
+          <details
+            class="border-b-2 border-slate-700 text-md md:text-xl p-3 lg:p-5 text-slate-700"
+          >
+            <summary class="cursor-pointer">
+              03. Xenon, are you a developer or designer?
+            </summary>
+            <p class="mt-5 text-xl md:text-2xl">
+              I can design, but my primary focus is development, particularly
+              back-end development.
+            </p>
+          </details>
+          <details
+            class="border-b-2 border-slate-700 text-md md:text-xl p-3 lg:p-5 text-slate-700"
+          >
+            <summary class="cursor-pointer">
+              04. Xenon, who host the website?
+            </summary>
+            <p class="mt-5 text-xl md:text-2xl">
+              It depends on what you prefer. If you are not much aware of these
+              hosting services, I recommend you the best suitable one for your
+              requirements, or I can also help you with your existing provider
+              if you already have one.
+            </p>
+          </details>
+          <details
+            class="border-b-2 border-slate-700 text-md md:text-xl p-3 lg:p-5 text-slate-700"
+          >
+            <summary class="cursor-pointer">
+              05. Xenon, what happens if my site breaks?
+            </summary>
+            <p class="mt-5 text-xl md:text-2xl">
+              Don’t make assumptions. The site may break down due to reasons
+              like incompatible browser, temporary problems, problems in web
+              hosting, etc. Your site may have been hacked or might be due to a
+              technical error that needs to be fixed. I help analyze the problem
+              that occurred and deliver solutions based on it.
+            </p>
+          </details>
+          <details
+            class="border-b-2 border-slate-700 text-md md:text-xl p-3 lg:p-5 text-slate-700"
+          >
+            <summary class="cursor-pointer">
+              06. Xenon, what if I am not happy with my web design, do you offer
+              a refund?
+            </summary>
+            <p class="mt-10 text-xl md:text-2xl"></p>
+          </details>
+          <details
+            class="border-b-2 border-slate-700 text-md md:text-xl p-3 lg:p-5 text-slate-700"
+          >
+            <summary class="cursor-pointer">
+              07. Xenon, can you be my boyfriend?
+            </summary>
+            <p class="mt-5 text-xl md:text-2xl">Sorry. Already taken.</p>
+          </details>
+          <p class="text-slate-700 px-2 mt-5 text-md md:text-xl">
+            Life is short, then turn into lifeeeeeeee now life is long. Just
+            keep moving...
+          </p>
+          <p class="px-2 text-md md:text-lg flex items-center">
+            <ion-icon name="play-outline"></ion-icon> Xenon
+          </p>
+        </div>
+        <div class="modal-footer">
+          <h3 class="text-slate-700 p-2 text-md md:text-lg">
+            &copy; 2022 Xenon Vergara. All rights reserved.
+          </h3>
+        </div>
+      </div>
+    </div>
   </body>
 
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->

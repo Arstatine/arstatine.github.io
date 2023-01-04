@@ -120,3 +120,39 @@ function closeMenu() {
     window.history.replaceState(null, 'Link', '/');
   });
 }
+
+// onclick scrlol to contact
+// onclick menu list close menu
+function openContact() {
+  $(document).ready(function () {
+    window.location = '/#contact';
+    window.history.replaceState(null, 'Link', '/');
+  });
+}
+
+// onclick hi button open modal
+function openModal() {
+  $(document).ready(function () {
+    $('#menu-icon').attr('name', 'menu');
+    $('#menu-item').removeClass('opacity-100').addClass('opacity-0');
+    $('#menu-item').removeClass('left-0').addClass('left-[100vw]');
+    $('#myModal').css('display', 'flex');
+
+    $('#close').click(function () {
+      $('#myModal').css('display', 'none');
+    });
+  });
+}
+
+const details = document.querySelectorAll('details');
+
+details.forEach((targetDetail) => {
+  targetDetail.addEventListener('click', () => {
+    // Close all the details that are not targetDetail.
+    details.forEach((detail) => {
+      if (detail !== targetDetail) {
+        detail.removeAttribute('open');
+      }
+    });
+  });
+});
