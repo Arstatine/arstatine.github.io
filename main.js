@@ -144,6 +144,21 @@ function openModal() {
   });
 }
 
+// onclick hi button open modal
+function openResume() {
+  $(document).ready(function () {
+    $('#menu-icon').attr('name', 'menu');
+    $('#menu-item').removeClass('opacity-100').addClass('opacity-0');
+    $('#menu-item').removeClass('left-0').addClass('left-[100vw]');
+    $('#resumeModal').css('display', 'flex');
+    window.history.replaceState(null, 'Link', '/');
+
+    $('#close1').click(function () {
+      $('#resumeModal').css('display', 'none');
+    });
+  });
+}
+
 const details = document.querySelectorAll('details');
 
 details.forEach((targetDetail) => {
