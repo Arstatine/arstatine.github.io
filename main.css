@@ -124,3 +124,18 @@ input[type='number'] {
 .modal-footer {
   padding: 2px 16px;
 }
+
+@media (max-width: 1450px) {
+  .list-link {
+    width: 100% !important;
+    margin-left: 0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .list-link {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
