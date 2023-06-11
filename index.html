@@ -517,10 +517,9 @@
             </p>
           </div>
           <form
-            action=""
+            action="https://script.google.com/macros/s/AKfycbytExfSsz7R_chmsKb_VFcMpLdmpVjsos0dOVfgd0tnRi4PbsAlVeMtKDHA4pHxU2E1YA/exec"
             class="flex justify-center items-center md:items-start flex-col w-[100%] md:w-[50%]"
-            name="contact"
-            netlify
+            name="inquiry_form"
           >
             <select
               name="inquiry"
@@ -854,5 +853,24 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
+
+  <!-- GOOGLE SHEET -->
+  <script>
+    const scriptURL = '';
+    const form = document.forms['inquiry_form'];
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then((response) =>
+          alert('Thank you! your form is submitted successfully.')
+        )
+        .then(() => {
+          window.location.reload();
+        })
+        .catch((error) => console.error('Error!', error.message));
+    });
+  </script>
+
   <script src="main.js"></script>
 </html>
