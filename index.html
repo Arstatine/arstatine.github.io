@@ -572,6 +572,10 @@
             >
               Submit &nbsp;<ion-icon name="send-outline"></ion-icon>
             </button>
+
+            <div class="p-3 m-2 bg-green-500 rounded hidden" id="inq_message">
+              Submitted successfully.
+            </div>
           </form>
         </div>
 
@@ -856,17 +860,20 @@
 
   <!-- GOOGLE SHEET -->
   <script>
-    const scriptURL = '';
+    const scriptURL =
+      'https://script.google.com/macros/s/AKfycbytExfSsz7R_chmsKb_VFcMpLdmpVjsos0dOVfgd0tnRi4PbsAlVeMtKDHA4pHxU2E1YA/exec';
     const form = document.forms['inquiry_form'];
+    const inq_message = document.getElementById('inq_message');
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then((response) =>
-          alert('Thank you! your form is submitted successfully.')
-        )
-        .then(() => {
-          window.location.reload();
+        .then((response) => {
+          form.reset();
+          inq_message.style.display = 'block';
+          setTimeout(() => {
+            inq_message.style.display = 'none';
+          }, 5000);
         })
         .catch((error) => console.error('Error!', error.message));
     });
