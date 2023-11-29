@@ -1,6 +1,0 @@
-[[redirects]]
-    from = "/*"
-    to = "https://arstatine.github.io"
-    status = 301
-    force = true
-    headers = {X-From = "Netlify"}
